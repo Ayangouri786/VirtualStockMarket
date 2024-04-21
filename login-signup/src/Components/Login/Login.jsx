@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import './Login.css'
+import { Link } from "react-router-dom";
+
 import logo_icon from '../Assets/logo.png'
 
 import { FaUser } from "react-icons/fa";
@@ -28,13 +30,13 @@ const Login = () => {
 
           <div className="remember-forgot">
             <label htmlFor=""><input type="checkbox" />Remember me</label>
-            <a href="#">Forgot password?</a>
+            <Link to="/Forgot_Password">Forgot password?</Link>
           </div>
 
-          <button type='submit' className='login-btn'>Login</button>
+          <button type='submit' className='login-btn'><a href="#">Login</a></button>
 
           <div className="register-link">
-            <p>Don't have an account? <a href='#'>Register</a> </p>
+            <p>Don't have an account? <Link to="/Register">Register</Link> </p>
           </div>
         </form>
         </div>
